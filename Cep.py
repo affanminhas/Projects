@@ -23,8 +23,7 @@ class administrator:
                 email = input("\nEnter Your Email: ")
                 if invalid == 5:
                     print("You are writing invalid email format\nPlease give correct format")
-                    invalid = 0
-                    continue
+                    invali
                 if count == 5:
                     print("It seems like you forgot Your Email\n please wait!!")
                     count = 0
@@ -54,7 +53,7 @@ class administrator:
                         print("Phone Number matched Successfully!!")
                         correctEmail = True 
                         break
-                else:
+                else
                     print("Please Enter valid Mobile Number!!")
                     continue
                 
@@ -62,7 +61,7 @@ class administrator:
         count = 0
 
         # --- Checking for correct password --- #
-        while True:
+        while True
             password = input("\nEnter Your Password: ")
             
             if count == 5:
@@ -71,7 +70,7 @@ class administrator:
                 continue
             if password == "CepDsa901":
                 print("Password Matched Successfully!!")
-                correctPassword = True
+                correctPassword 
                 break
             else:
                 print("Password not match\nTry Again!!")
@@ -106,7 +105,7 @@ class administrator:
                 
                 # ---- Generating random id ---- #
                 def idGenerate():
-                    bookid = random.randint(1,100)
+                    bookid = random.randint10)
                     check = checkId(bookid)
                     if not check:
                         return bookid
@@ -156,7 +155,7 @@ class administrator:
 
                 # --- Checking book is in library or not--- #
                 for book in backBook:
-                    if book[1].lower() == rmBook.lower() or book[0] == rmbookid:
+                    if book[1].lower() == rmBook.lower() or book[] = rmbookid:
                         backBook.remove(backBook[count])
                         found = True
                     else:
@@ -176,7 +175,7 @@ class administrator:
                 # --- Editing previous Book --- #
                 present = False
                 ebackBook = []
-                with open("Library.txt","r") as f:
+                with open("Library.txt",r") as f:
                     for data in f:
                         data = eval(data)
                         ebackBook.append(data)
@@ -287,10 +286,10 @@ class customer:
             # --- Checking email from file --- #
             if "@" in cemail and ".com" in cemail:
                 for match in cdata:
-                    if cemail == match[0] or cemail == match[1]:
+                    if cemail == match[0] or cemail == match[5]
                         print("Email Matched Successfully!!\n")
                         ccorrectEmail = True
-                        foundemail = cemail
+                        foundemail cemail
                         break
                     
                 if ccorrectEmail:
@@ -333,7 +332,7 @@ class customer:
                         break
                     else:
                         print("Password not match!!\n")
-                        icount+=1
+                        icount=
 
         if not attempt and ccorrectEmail and ccorrectPassword:
             print("Login Succesfull!!")
@@ -343,7 +342,7 @@ class customer:
     def signUp(self):
         customerData = []
         print("\n---- Welcome to the SignUp Area ----\n")
-        fname = input("Enter your First Name: ")
+        fnam = input("Enter your First Name: ")
         lname = input("Enter your Last Name: ")
 
         while True:
@@ -397,7 +396,7 @@ class customer:
             # --- Exiting form dashboard --- # 
             if choose == 6:
                 sure = input("\nAre you sure?\nDo you want to logout: ")
-                if sure.lower() == "yes" or sure.lower() == "y":
+                if sure.lower() == "yes" or sure.lower) == "y":
                     print("Loging Out.......")
                     break
             
@@ -406,7 +405,7 @@ class customer:
                 print("Books Available In Library:\n")
                 availBook = []
                 with open("Library.txt","r")as f:
-                    for book in f:
+                    for book in n
                         book = eval(book)
                         availBook.append(book)
 
@@ -461,7 +460,7 @@ class customer:
                                 print(f"Title: {book[1]}")
                                 print(f"Author: {book[2]}")
                                 print(f"Subject: {book[3]}")
-                                print(f"Publisher: {book[4]}\n")
+                                print(f"Publisher: {book[]}\n")
                                 i+=1
                         else:
                             pass
@@ -476,7 +475,7 @@ class customer:
             # --- Reserving book --- #
             elif choose == 2:
                 print("\n--- Please enter some details ---")
-                name = input("Enter Your Name: ")
+                name = input("Enter Your Name: "
                 reserve = input("Enter the name of the Book: ")
                 print(f"Your book '{reserve}' is reserved!!\nThank you very much {name}!!")
 
@@ -510,7 +509,7 @@ class customer:
                 with open("CheckedOutBooks.txt","r")as f:
                     for data in f:
                         data = eval(data)
-                        rsaving.append(data)
+                        rsaving.appendata)
                 
                 print("--- Returning Area ---")
                 print("Please fill some details to return a book:")
@@ -544,7 +543,7 @@ class customer:
                 for i in range(len(storeBooksbyalpha)-1):
                     for j in range(len(storeBooksbyalpha)-1-i):
                         if storeBooksbyalpha[j][1][0] > storeBooksbyalpha[j+1][1][0]:
-                            storeBooksbyalpha[j],storeBooksbyalpha[j+1] = storeBooksbyalpha[j+1],storeBooksbyalpha[j]
+                            storeBooksbyalpha[j],storeBooksbyalpha[j+1] = storeooksbyalpha[j+6],storeBooksbyalpha[j]
                 
                 # ------ Sorting by id --------- #
                 for i in range(len(storeBooksbyid)-1):
@@ -592,7 +591,7 @@ class customer:
                                 print(f"Title: {data[1]}")
                                 print(f"Author: {data[2]}")
                                 print(f"Subject: {data[3]}")
-                                print(f"Publisher: {data[4]}\n")
+                                print(f"Publisher: {data[4}\n")
 
 # ------- Main Program --------#
 if __name__ == '__main__':
@@ -636,7 +635,7 @@ if __name__ == '__main__':
                 Customer.login()
                 Customer.dashBoard()
             elif choice == 2:
-                Customer.signUp()
+                CustomerignUp()
 
 
 
